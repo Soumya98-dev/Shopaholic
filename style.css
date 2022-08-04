@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header {
+  background-color: lightgreen;
+  width: 60%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.header h4 {
+  padding-bottom: 2rem;
+}
+
+.header input[type='text'] {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border: 3px solid darkcyan;
+  font-size: 14px;
+  color:blue;
+}
+
+.header input[type='text']:hover{
+  border: 3px solid rgb(128, 111, 104);
+}
+
+.header input[type='checkbox'] {
+  margin-bottom: 2rem;
+}
+
+.header label {
+  padding-right: 0.8rem;
+}
