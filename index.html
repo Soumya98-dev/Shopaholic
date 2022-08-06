@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopaholic|Landing Page</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopaholic|Landing Page</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-  <div id="parent-container">
-    <div class="header">
-      <h1>Shopaholic</h1>
-      <h4>My shopping list</h4>
-      <input type="text" placeholder="Search items..."><br>
-      <label for="hide">Hide List</label>
-      <input type="checkbox" id="hide">
+  <body>
+    <div id="parent-container">
+      <div class="header">
+        <h1>Shopaholic</h1>
+        <h4>My shopping list</h4>
+        <input type="text" placeholder="Search items..." /><br />
+        <label for="hide">Hide List</label>
+        <input type="checkbox" id="hide" />
+      </div>
+      <form class="middle-context">
+        <input type="text" placeholder="What do you want to buy?" />
+        <button type="submit">Add</button>
+      </form>
+      <hr />
+      <div class="items-context">
+        <h3>Items To Buy</h3>
+        <ul class="items">
+<!--          <li>-->
+<!--            <span class="item">Milk</span>-->
+<!--            <span class="delete">delete</span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <span class="item">Milk</span>-->
+<!--            <span class="delete">delete</span>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <span class="item">Milk</span>-->
+<!--            <span class="delete">delete</span>-->
+<!--          </li>-->
+        </ul>
+      </div>
     </div>
-    <form class="middle-context">
-      <input type="text" placeholder="What do you want to buy?">
-      <button type="submit">Add</button>
-    </form>
-    <hr>
-    <div class="items-context">
-      <h3>Items To Buy</h3>
-      <ul class="items">
-        <li>
-          <span class="item">Milk</span>
-          <span class="delete">delete</span>
-        </li>
-        <li>
-          <span class="item">Milk</span>
-          <span class="delete">delete</span>
-        </li>
-        <li>
-          <span class="item">Milk</span>
-          <span class="delete">delete</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>
