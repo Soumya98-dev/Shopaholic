@@ -22,11 +22,11 @@ let ul = document.querySelector("ul");
 ul.addEventListener("click", removeLI);
 
 function removeLI(e) {
-    let target = e.target;
-    if (target.className === "delete") {
-        // console.log(target.parentElement);
-        target.parentElement.remove();
-    }
+  let target = e.target;
+  if (target.className === "delete") {
+    // console.log(target.parentElement);
+    target.parentElement.remove();
+  }
 }
 
 //*** ACCESSING THE FORM input: middle-context
@@ -37,21 +37,34 @@ let inputMiddleContext = document.querySelector(".middle-context input");
 let buttonMiddleContext = document.querySelector(".middle-context button");
 // console.log(buttonMiddleContext);
 buttonMiddleContext.addEventListener("click", (event) => {
-    let text = inputMiddleContext.value;
-    //*** CREATING A NEW <li> TAG
-    const li = document.createElement('li');
-    document.querySelector("ul").appendChild(li);
-    //*** CREATING A NEW <span> TAG INSIDE THE <li>
-    const newSpan = document.createElement('span');
-    li.appendChild(newSpan);
-    newSpan.classList.add('item');
-    newSpan.innerHTML = text;
-    //*** CREATING A NEW BUTTON AFTER THE <span> INSIDE THE NEW <li>
-    const newBtn = document.createElement('span');
-    li.appendChild(newBtn);
-    newBtn.classList.add('delete');
-    newBtn.innerHTML = 'delete';
+  //*** GETTING THE VALUE FROM THE TEXT FIELD
+  let text = inputMiddleContext.value;
+  //*** CREATING A NEW <li> TAG
+  const li = document.createElement("li");
+  //*** APPENDING THE NEW <li> TO THE BOTTOM OF THE <ul>
+  document.querySelector("ul").appendChild(li);
+  //*** CREATING A NEW <span> TAG INSIDE THE <li>
+  const newSpan = document.createElement("span");
+  li.appendChild(newSpan);
+  newSpan.classList.add("item");
+  newSpan.innerHTML = text;
+  //*** CREATING A NEW BUTTON AFTER THE <span> INSIDE THE NEW <li>
+  const newBtn = document.createElement("span");
+  li.appendChild(newBtn);
+  newBtn.classList.add("delete");
+  newBtn.innerHTML = "delete";
 
-    inputMiddleContext.value = '';
-    event.preventDefault();
+  inputMiddleContext.value = "";
+  event.preventDefault();
+});
+
+//*** HIDE LIST
+let itemsContextDiv = document.querySelector(".items-context");
+let hideList = document.getElementById("hide");
+hideList.addEventListener("change", (event) => {
+  if (event.target.checked) {
+    itemsContextDiv.style.display = "none";
+  } else {
+    itemsContextDiv.style.display = "block";
+  }
 });
